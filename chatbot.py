@@ -17,7 +17,7 @@ if os.path.isfile("tommybot.mem") == False:
         print(x)
         time.sleep(0.2)
     print("OK!")
-    #This is because r+ does not create a file for us to work with automaticlly.
+    #This is because w+ does not create a file for us to work with automaticlly.
     rtempchatbot = open("tommybot.mem", "w")
     rtempchatbot.close()
     tempchatbot = open("tommybot.mem", "r+")
@@ -32,10 +32,15 @@ if os.path.isfile("tommybot.mem") == False:
     print("(We are not affilated with the website chatbot.net, which goes under the name Chatbot Network.)")
 print("TommyChatbot")
 print("Decoding and loading data...")
-chatbotdata = open("tommybot.mem", "a+")
+chatbotdata = open("tommybot.mem", "r")
 memory = json.loads(chatbotdata.read())
 def save():
-    chatbotdata.write(json.dumps(memory, separators=(',', ':')))
+    global chatbotdata
+    chatbotdata.close()
+    chatbot = open("tommybot.mem", "w")
+    chatbot.write(json.dumps(memory, separators=(',', ':')))
+    chatbot.close()
+    chatbotdata = open("tommybot.mem", "r")
 if memory["status"] == "new":
     print("Hi! My name is " + memory["name"] + ". What's your name?")
     memory["yourname"] = input("You: ")
