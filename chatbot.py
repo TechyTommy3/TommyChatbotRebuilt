@@ -48,11 +48,25 @@ if memory["status"] == "new":
     save()
     print("Anyways, isn't the Chatbot Network great?")
     answer = input("You: ")
-    if answer == "Yes." or "Yes!":
+    if "Yes" in answer:
         print("I think that too!")
         memory["cblike"] = "yes"
     else:
         print("While, I don't understand why not.")
-        memory["cblike"] = "yes"
+        memory["cblike"] = "no"
     save()
     print("Anyways, thanks for talking to me today, " + memory["yourname"] + "!")
+    memory["status"] = "littlenewer"
+    save()
+    print("Let's chat!")
+if memory['status'] == "littlenewer":
+    print("What should we talk about?")
+    answer = input("You: ")
+    if "OSFirstTimer" in answer:
+        print("OSFirstChatbot!")
+        memory['talkbot'] = "OSFirstTimer"
+        save()
+        osftq = ["Remeber that episode where"]
+    elif "Technology" in answer:
+        print("Wow, you like technology?")
+        print("Let's talk about that!")
