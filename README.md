@@ -6,11 +6,11 @@ What TommyChatbot does is check for a certain reponses, or certain words, or cer
 When it finds it, it runs the correct actions for it, which is thinking about it, and printing a message onto your screen.
 No AI or internet involved.
 # Install
-First, either download and extract that ZIP file, or clone the Git repository.
-Cloning the Git repository makes updating easy!
-To do that, run this command:
-git clone https://github.com/TechyTommy3/TommyChatbotRebuilt.git
-And to update it, run this one in the directory of TommyChatbot:
-git pull
-And to run it, install Python 3.
-The core version of Python contains everything you need.
+First, either download and extract that ZIP file, or clone the Git repository.<br>
+Cloning the Git repository makes updating easy!<br>
+To do that, run this command:<br>
+git clone https://github.com/TechyTommy3/TommyChatbotRebuilt.git<br>
+And to update it, run this one in the directory of TommyChatbot:<br>
+git pull<br>
+And to run it, install Python 3.<br>
+The core version of Python contains everything you need.<br>
