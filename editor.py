@@ -7,7 +7,11 @@ memory = json.loads(chatbotdata.read())
 print("----- Current Chatbot Data -----")
 print("Status: " + memory['status'])
 print("Name: " + memory['name'])
-if memory['yourname']:
+if 'yourname' in memory:
     print("Creator's Name: " + memory['yourname'])
-if memory['talkbot']:
+if 'talkbot' in memory:
     print("Mainly talks about: " + memory['talkbot'])
+if 'engine' in memory:
+    print("Engine: TommyChatbot Framework")
+else:
+    print("Engine: TommyChatbot")

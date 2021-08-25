@@ -1,2 +1,2 @@
 print("Multi-Save Editor")
-print("Choose your save: ")
+save = input("Choose your save: ")

@@ -66,7 +66,6 @@ if memory['status'] == "littlenewer":
         print("OSFirstChatbot!")
         memory['talkbot'] = "OSFirstTimer"
         save()
-        osftq = ["Remeber that episode where"]
     elif "Technology" in answer:
         print("Wow, you like technology?")
         print("Let's talk about that!")
