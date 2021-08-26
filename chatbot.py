@@ -1,4 +1,3 @@
-import pickle
 import os
 import json
 import time
@@ -87,4 +86,4 @@ if memory['status'] == "littlenewer":
         elif "No" in answer:
             print("I don't know what else is called IRC.")
         else:
-            print(" ")
+            print("OK!")
