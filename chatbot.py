@@ -69,3 +69,5 @@ if memory['status'] == "littlenewer":
     elif "Technology" in answer:
         print("Wow, you like technology?")
         print("Let's talk about that!")
+        memory['talkbot'] = "Technology"
+        save()
