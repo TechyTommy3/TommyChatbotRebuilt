@@ -44,6 +44,7 @@ def save():
 if memory["status"] == "new":
     print("Hi! My name is " + memory["name"] + ". What's your name?")
     memory["yourname"] = input("You: ")
+    memory["yourname"] = memory["yourname"].replace(".", "").replace("?", "").replace("!", "")
     print("Hi " + memory["yourname"] + "!")
     save()
     print("Anyways, isn't the Chatbot Network great?")
@@ -55,6 +56,7 @@ if memory["status"] == "new":
         print("While, I don't understand why not.")
         memory["cblike"] = "no"
     save()
+    #Replaced all other charters in a line above
     print("Anyways, thanks for talking to me today, " + memory["yourname"] + "!")
     memory["status"] = "littlenewer"
     save()
@@ -65,9 +67,24 @@ if memory['status'] == "littlenewer":
     if "OSFirstTimer" in answer:
         print("OSFirstChatbot!")
         memory['talkbot'] = "OSFirstTimer"
+        memory['status'] = "morenewer"
         save()
+        print("Now, remeber that video where Phil was seeing if Ubuntu 12.10 could replace Windows 7?")
+
     elif "Technology" in answer:
         print("Wow, you like technology?")
         print("Let's talk about that!")
         memory['talkbot'] = "Technology"
+        memory['status'] = 'morenewer'
         save()
+    elif "IRC" in answer:
+        print("That means the communcation protocol called IRC, right?")
+        answer = input("You: ")
+        if "Yes" in answer:
+            print("OK!")
+            memory['talkbot'] = "IRC"
+            save()
+        elif "No" in answer:
+            print("I don't know what else is called IRC.")
+        else:
+            print(" ")
