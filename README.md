@@ -1,5 +1,5 @@
 # TommyChatbot
-A remade version of TommyChatbot, made in Python! While, TommyChatbot wasn't very impresive. But TommyChatbot Rebuilt is no longer supported.
+A remade version of TommyChatbot, made in Python! While, TommyChatbot wasn't very impresive. But TommyChatbot Rebuilt is no longer supported, and is archived for preservation reasons.
 # How it works
 TommyChatbot doesn't understand what you say. Yes, seriously!
 What TommyChatbot does is check for a certain reponses, or certain words, or certain something.
